@@ -1,0 +1,283 @@
+.containerrr{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-image: url(https://w0.peakpx.com/wallpaper/898/356/HD-wallpaper-medical-professional-929-amoled-black-doctor-minimilist-nurse-physician-plain-white.jpg);
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: cover; /* Makes the image cover the entire background */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    height: 100%; /* Ensures the body takes the full height of the viewport */
+    min-height: 100vh; /* Ensures content doesn't exceed viewport */
+  }
+  
+  h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  
+  .upload-section {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: -40px;
+  }
+  .upload-button-container {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .upload-button {
+    text-align: center;
+    margin: 30px;
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    color: #FFF;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;  
+  }
+  
+  .upload-button::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  /* glow */
+  .upload-button::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #FF0000, #FF7300, #FFFB00, #48FF00,
+      #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height:  calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+  }
+  
+  @keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+  }
+  
+  /* hover */
+  .upload-button:hover::before {
+    opacity: 1;
+  }
+  
+  .upload-button:active:after {
+    background: transparent;
+  }
+  
+  .upload-button:active {
+    color: #000;
+    font-weight: bold;
+  }
+  
+  
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .image-section {
+    padding: 20px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    
+    
+  }
+  
+  .image-section img {
+    max-width: 100%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  
+  
+  .loader {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    color: #7f8c8d;
+  }
+  
+  .diagnosis {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .diagnosis h3 {
+    color: #2c3e50;
+    margin-top: 0;
+  }
+  
+  .chat-section {
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px;
+    padding: 20px;
+  
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    
+  }
+  
+  .chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+  }
+  
+  .message {
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    max-width: 80%;
+  }
+  
+  .message.user {
+    background-color: #3498db;
+    color: white;
+    margin-left: auto;
+  }
+  
+  .message.assistant {
+    background-color: white;
+    color: #2c3e50;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .chat-input {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .chat-input button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .chat-input button:hover {
+    background-color: #2980b9;
+  }
+  
+  @media (max-width: 768px) {
+    .content {
+      grid-template-columns: 1fr;
+    }
+    
+    .chat-section {
+      height: 400px;
+    }
+  }
+  
+  .footer {
+    background-color: #f1f1f1; /* Light gray background */
+    text-align: center;        /* Centered text */
+    padding: 10px 0;          /* Padding for spacing */
+    position: fixed;           /* Fixed position at the bottom */
+    bottom: 0;                 /* Aligns to the bottom */
+    left: 0;                   /* Aligns to the left */
+    right: 0;                  /* Aligns to the right */
+  }
+  
+  .footer a {
+    color: #0073e6;            /* LinkedIn link color */
+    text-decoration: none;     /* No underline on the link */
+  }
+  
+  .footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+
+  
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+  }
+  
+  button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  button:hover {
+    border-color: #646cff;
+  }
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      color: #213547;
+      background-color: #ffffff;
+    }
+    a:hover {
+      color: #747bff;
+    }
+    button {
+      background-color: #f9f9f9;
+    }
+  }
+  
