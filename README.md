@@ -47,3 +47,5 @@ cd healme-pocket-doctor
 npm install
 npm run dev
 ```
+
+Built by Ayush Kumar Rai as part of my web development journey.
